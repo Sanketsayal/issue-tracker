@@ -1,0 +1,179 @@
+#project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project .create-btn {
+  background-color: greenyellow;
+  height: 5vh;
+  width: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#project #create-project {
+  height: 0;
+  width: 98.5vw;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+#project #create-project #new-project-form {
+  background-color: lightslategray;
+  height: 50%;
+  width: 30%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#project #create-project #new-project-form input {
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+}
+
+#project #create-project #new-project-form input:focus {
+  outline-width: 0;
+}
+
+#project #create-project #new-project-form textarea {
+  border-radius: 10px;
+  text-align: center;
+}
+
+#project #create-project #new-project-form textarea:focus {
+  outline-width: 0;
+}
+
+#project #create-project #new-project-form #title {
+  height: 10%;
+  width: 90%;
+}
+
+#project #create-project #new-project-form #description {
+  height: 30%;
+  width: 90%;
+}
+
+#project #create-project #new-project-form #author {
+  height: 10%;
+  width: 90%;
+}
+
+#project #create-project #new-project-form #label {
+  height: 10%;
+  width: 90%;
+}
+
+#project .create-btn:hover {
+  box-shadow: 0 3px 10px grey;
+  cursor: pointer;
+}
+
+#project #project-details {
+  height: 40vh;
+  width: 40vw;
+  background-color: aquamarine;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#project #project-details h1 {
+  margin-left: 5vh;
+}
+
+#project #project-details hr {
+  width: 100%;
+  border-color: white;
+}
+
+#project #issues {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project #issues h2 {
+  height: 7vh;
+  width: 20vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#project #issues #issue-list {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#project #issues .issue-card {
+  height: 23vh;
+  width: 15vw;
+  background-color: lawngreen;
+}
+
+#project #issues .issue-card h3 {
+  margin-left: 10%;
+}
+
+#project #issues #btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#project #issues #btn .issue-btn {
+  height: 5vh;
+  width: 10vw;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project #issues #btn .issue-btn:hover {
+  box-shadow: 0 3px 10px grey;
+  cursor: pointer;
+}
+
+#project #issues #filter-author {
+  margin-top: 5vh;
+  height: auto;
+  overflow: hidden;
+}
+
+#project #issues #filter-author #author-input {
+  height: 0;
+  overflow: hidden;
+}
+
+#project #issues #filter-author #title-input {
+  height: 0;
+  overflow: hidden;
+}
+
+#project #issues #filter-author #label-input {
+  height: 0;
+  overflow: hidden;
+}
+
+.toogle-list {
+  height: auto !important;
+}

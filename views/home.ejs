@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home">
+    <div class="create-btn" onclick="overlay()">
+        <h3>Create Project</h3>
+    </div> 
+
+    <div id="create-project">
+        <form action="/projects/create" id="new-project-form" method="post">
+            <input type="text" name="name" id="name" placeholder="Name of project">
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <input type="text" name="author" id="author" placeholder="Author">
+            <button onclick="overlayHide()">Create Project</button>
+        </form>
+    </div>
+    
+    <% for(project of projects){ %>
+        <ul>
+            <a href="projects/<%= project._id  %>">
+                <div class="project-card">
+                    <div class="name">
+                        <h2>Project Name:</h2>
+                        <span><%= project.name %></span>
+                    </div>
+                    <hr>
+                    <div class="name">
+                        <h2>Description:</h2>
+                        <span><%= project.description %></span>
+                    </div>
+                    <div class="name">
+                        <h2>Author:</h2>
+                        <span><%= project.author %></span>
+                    </div>
+                </div>
+            </a>
+            
+        </ul>
+    <% } %>
+
+</div>
+
+<script src="/js/home.js"></script>

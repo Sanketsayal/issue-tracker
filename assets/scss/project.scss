@@ -1,0 +1,164 @@
+#project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .create-btn{
+        background-color: greenyellow;
+        height: 5vh;
+        width: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #create-project{
+        height: 0;
+        width: 98.5vw;
+        overflow: hidden;
+        position: sticky;
+        top:0;
+        transition: 1s;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        
+        #new-project-form{
+            background-color: lightslategray;
+            height: 50%;
+            width: 30%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            input{
+                border-radius: 10px;
+                text-align: center;
+                border: none;
+            }
+            input:focus{
+                outline-width: 0;
+            }
+            
+            textarea{
+                border-radius: 10px;
+                text-align: center;
+            }
+            textarea:focus{
+                outline-width: 0;
+            }
+            #title{
+                height: 10%;
+                width: 90%;
+            }
+            #description{
+                height: 30%;
+                width: 90%;
+            }
+            #author{
+                height: 10%;
+                width: 90%;
+            }
+            #label{
+                height: 10%;
+                width: 90%;
+            }
+        }
+        
+        
+    }
+    .create-btn:hover{
+        box-shadow: 0 3px 10px grey;
+        cursor: pointer;
+    }
+    #project-details{
+        height: 40vh;
+        width: 40vw;
+        background-color: aquamarine;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h1{
+            margin-left: 5vh;
+        }
+        hr{
+            width: 100%;
+            border-color: white;
+        }
+    }
+
+
+
+    // issues
+    #issues{
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            height: 7vh;
+            width: 20vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #issue-list{
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        
+        .issue-card{
+            height: 23vh;
+            width: 15vw;
+            background-color: lawngreen;
+            h3{
+                margin-left: 10%;
+            }
+        }
+        #btn{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            .issue-btn{
+                height: 5vh;
+                width: 10vw;
+                background-color: greenyellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .issue-btn:hover{
+                box-shadow: 0 3px 10px grey;
+                cursor: pointer;
+            }
+        }
+        #filter-author{
+            margin-top: 5vh;
+            height: auto;
+            overflow: hidden;
+            #author-input{
+                height: 0;
+                overflow: hidden;
+            }
+            #title-input{
+                height: 0;
+                overflow: hidden;
+            }
+            #label-input{
+                height: 0;
+                overflow: hidden;
+            }
+        }
+
+    }
+    
+}
+
+.toogle-list{
+    height: auto !important;
+}

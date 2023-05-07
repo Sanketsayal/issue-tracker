@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+}
+.head{
+    height: 5vh;
+    width: 27vh;
+    border-bottom: 5px solid rebeccapurple;
+    border-left: 5px solid rebeccapurple;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

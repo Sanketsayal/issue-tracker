@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="/css/project.css">
+
+<div id="project">
+    <div class="create-btn" onclick="overlay()">
+        <h3>Create Issue</h3>
+    </div> 
+    <div id="create-project">
+        <form action="/issues/create" id="new-project-form" method="post">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <input type="hidden" name="project" value="<%= project._id %>">
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <select name="label" id="label" >
+                <option value="" selected="selected">select a label</option>
+                <option value="bug">Bug</option>
+                <option value="code">Code</option>
+                <option value="network">Network</option>
+                <option value="algorithm">Algorithm</option>
+                <option value="ui issue">UI Issue</option>
+                <option value="enhancement">Enhancement</option>
+            </select>
+            <input type="text" name="author" id="author" placeholder="Author">
+            <button onclick="overlayHide()">Create Issue</button>
+        </form>
+    </div>
+    <div id="project-details">
+        <h1>Project Name:<%= project.name %></h1>
+        <hr>
+        <h1>Description:<%= project.description %></h1>
+        <h1>Author:<%= project.author %></h1>
+    </div>
+
+    <div id="issues">
+        <h2>Issues</h2>
+        <div id="btn">
+            <div class="issue-btn" onclick="issuesHide('issue-list')">
+                <h3>Show All</h3>
+            </div>
+            <div class="issue-btn" onclick="issuesHide('author-input')">
+                <h3>Filter by Author</h3>
+            </div>
+            <div class="issue-btn" onclick="issuesHide('title-input')">
+                <h3>Filter by title</h3>
+            </div>
+            <div class="issue-btn" onclick="issuesHide('label-input')">
+                <h3>Filter by label</h3>
+            </div>
+        </div>
+        <div id="issue-list">
+            <ul >
+                <% for(issue of project.issues) {%>
+                    <div class="issue-card">
+                        <h3>Title:<%= issue.title %></h3>
+                        <h3>Description:<%= issue.description %></h3>
+                        <h3>Label:<%= issue.label%></h3>
+                        <h3>Author:<%= issue.author %></h3>
+                    </div>
+                <% } %>
+            </ul>
+        </div>
+        <div id="filter-author">
+            <div id="author-input">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author-search">
+                <button onclick="filterAuthor()">Search author</button>
+            </div>
+            <div id="title-input">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title-search">
+                <button onclick="filterTitle()">Search Title</button>
+            </div>
+            <div id="label-input">
+                <input type="checkbox" name="bug" value="bug">
+                <label for="bug">Bug</label>
+                <input type="checkbox" name="code" value="code">
+                <label for="code">Code</label>
+                <input type="checkbox" name="network" value="network">
+                <label for="network">Network</label>
+                <input type="checkbox" name="algorithm" value="algorithm">
+                <label for="algorithm">Algorithm</label>
+                <input type="checkbox" name="enhancement" value="Enhancement">
+                <label for="enhancement">Enhancement</label>
+                <button onclick="filterLabel()">Search Labels</button>
+            </div>
+            <ul id="author-list">
+                
+            </ul>
+        </div>
+        
+        
+    </div>
+    
+</div>
+<div id="data-retrieve" data="<%= JSON.stringify(project.issues)%>"></div>
+
+<script src="/js/project.js"></script>
